@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FGB - Automação</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+  <div class="content-wrapper">
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Dashboard</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item active">Dashnoard</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="content">
+      <div class="container-fluid">
+        <div class="col-sm-12">
+          <center>
+            <h3 class="m-0">Bom dia, Guilherme Goedtel!</h3><br>
+            <h4 class="m-0">Aqui esta a Previsão do Tempo!</h4>
+          </center>
+        </div>
+      </div>
+      <br>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-3 col-3" style="margin-left: 38%;">
+            <a href="#" class="small-box-footer">
+              <div class="small-box bg-primary" style="height: 200px;">
+                <center>
+                  <h4 style="line-height:200px;">Ligar</h4>
+                </center>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-3 col-3">
+            <a href="#" class="small-box-footer">
+              <div class="small-box bg-secondary" style="height: 200px;">
+                <center>
+                  <h4 style="line-height:200px;">Ligar</h4>
+                </center>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-3 col-3">
+            <a href="#" class="small-box-footer">
+              <div class="small-box bg-secondary" style="height: 200px;">
+                <center>
+                  <h4 style="line-height:200px;">Ligar</h4>
+                </center>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-3 col-3">
+            <a href="#" class="small-box-footer">
+              <div class="small-box bg-secondary" style="height: 200px;">
+                <center>
+                  <h4 style="line-height:200px;">Ligar</h4>
+                </center>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-3 col-3">
+            <a href="#" class="small-box-footer">
+              <div class="small-box bg-secondary" style="height: 200px;">
+                <center>
+                  <h4 style="line-height:200px;">Ligar</h4>
+                </center>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card bg-gradient-info">
+              <div class="card-header border-0">
+                <h3 class="card-title"><i class="fas fa-th mr-1"></i>Utilização do Sistema</h3>
+                <div class="card-tools">
+                  <button type="button" class="btn bg-info btn-sm" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn bg-info btn-sm" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <canvas class="chart" id="line-chart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+              </div>
+              <div class="card-footer bg-transparent">
+                <div class="row">
+                  <div class="col-4 text-center">
+                    <input type="text" class="knob" data-readonly="true" value="20" data-width="60" data-height="60" data-fgColor="#39CCCC">
+                    <div class="text-white">Mail-Orders</div>
+                  </div>
+                  <div class="col-4 text-center">
+                    <input type="text" class="knob" data-readonly="true" value="50" data-width="60" data-height="60" data-fgColor="#39CCCC">
+                    <div class="text-white">Online</div>
+                  </div>
+                  <div class="col-4 text-center">
+                    <input type="text" class="knob" data-readonly="true" value="30" data-width="60" data-height="60" data-fgColor="#39CCCC">
+                    <div class="text-white">In-Store</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Usuários do Sistema</h3>
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="card-body p-0">
+                <ul class="users-list clearfix">
+                  <li>
+                    <img src="dist/img/user1-128x128.jpg" alt="User Image">
+                    <a class="users-list-name" href="#">Alexander Pierce</a>
+                    <span class="users-list-date">Today</span>
+                  </li>
+                  <li>
+                    <img src="dist/img/user8-128x128.jpg" alt="User Image">
+                    <a class="users-list-name" href="#">Norman</a>
+                    <span class="users-list-date">Yesterday</span>
+                  </li>
+                  <li>
+                    <img src="dist/img/user7-128x128.jpg" alt="User Image">
+                    <a class="users-list-name" href="#">Jane</a>
+                    <span class="users-list-date">12 Jan</span>
+                  </li>
+                  <li>
+                    <img src="dist/img/user6-128x128.jpg" alt="User Image">
+                    <a class="users-list-name" href="#">John</a>
+                    <span class="users-list-date">12 Jan</span>
+                  </li>
+                  <li>
+                    <img src="dist/img/user2-160x160.jpg" alt="User Image">
+                    <a class="users-list-name" href="#">Alexander</a>
+                    <span class="users-list-date">13 Jan</span>
+                  </li>
+                  <li>
+                    <img src="dist/img/user5-128x128.jpg" alt="User Image">
+                    <a class="users-list-name" href="#">Sarah</a>
+                    <span class="users-list-date">14 Jan</span>
+                  </li>
+                  <li>
+                    <img src="dist/img/user4-128x128.jpg" alt="User Image">
+                    <a class="users-list-name" href="#">Nora</a>
+                    <span class="users-list-date">15 Jan</span>
+                  </li>
+                  <li>
+                    <img src="dist/img/user3-128x128.jpg" alt="User Image">
+                    <a class="users-list-name" href="#">Nadia</a>
+                    <span class="users-list-date">15 Jan</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <aside class="control-sidebar control-sidebar-dark"></aside>
+</div>
+
+<script src="plugins/jquery/jquery.min.js"></script>
+<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="plugins/chart.js/Chart.min.js"></script>
+<script src="plugins/sparklines/sparkline.js"></script>
+<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+<script src="plugins/moment/moment.min.js"></script>
+<script src="plugins/daterangepicker/daterangepicker.js"></script>
+<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<script src="plugins/summernote/summernote-bs4.min.js"></script>
+<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<script src="dist/js/adminlte.js"></script>
+<script src="dist/js/demo.js"></script>
+<script src="dist/js/pages/dashboard.js"></script>
+<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="plugins/jszip/jszip.min.js"></script>
+<script src="plugins/pdfmake/pdfmake.min.js"></script>
+<script src="plugins/pdfmake/vfs_fonts.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
+      "language": {
+        "emptyTable": "Nenhum registro encontrado",
+        "info": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
+        "infoEmpty": "Mostrando 0 até 0 de 0 registros",
+        "infoFiltered": "(Filtrados de _MAX_ registros)",
+        "infoThousands": ".",
+        "loadingRecords": "Carregando...",
+        "processing": "Processando...",
+        "zeroRecords": "Nenhum registro encontrado",
+        "search": "Pesquisar",
+        "paginate": {
+            "next": "Próximo",
+            "previous": "Anterior",
+            "first": "Primeiro",
+            "last": "Último"
+        },
+        "aria": {
+            "sortAscending": ": Ordenar colunas de forma ascendente",
+            "sortDescending": ": Ordenar colunas de forma descendente"
+        },
+        "select": {
+            "rows": {
+                "_": "Selecionado %d linhas",
+                "0": "Nenhuma linha selecionada",
+                "1": "Selecionado 1 linha"
+            },
+            "1": "%d linha selecionada",
+            "_": "%d linhas selecionadas",
+            "cells": {
+                "1": "1 célula selecionada",
+                "_": "%d células selecionadas"
+            },
+            "columns": {
+                "1": "1 coluna selecionada",
+                "_": "%d colunas selecionadas"
+            }
+        },
+        "buttons": {
+            "copySuccess": {
+                "1": "Uma linha copiada com sucesso",
+                "_": "%d linhas copiadas com sucesso"
+            },
+            "collection": "Coleção  <span class=\"ui-button-icon-primary ui-icon ui-icon-triangle-1-s\"><\/span>",
+            "colvis": "Visibilidade da Coluna",
+            "colvisRestore": "Restaurar Visibilidade",
+            "copy": "Copiar",
+            "copyKeys": "Pressione ctrl ou u2318 + C para copiar os dados da tabela para a área de transferência do sistema. Para cancelar, clique nesta mensagem ou pressione Esc..",
+            "copyTitle": "Copiar para a Área de Transferência",
+            "csv": "CSV",
+            "excel": "Excel",
+            "pageLength": {
+                "-1": "Mostrar todos os registros",
+                "1": "Mostrar 1 registro",
+                "_": "Mostrar %d registros"
+            },
+            "pdf": "PDF",
+            "print": "Imprimir"
+        },
+        "autoFill": {
+            "cancel": "Cancelar",
+            "fill": "Preencher todas as células com",
+            "fillHorizontal": "Preencher células horizontalmente",
+            "fillVertical": "Preencher células verticalmente"
+        },
+        "lengthMenu": "Exibir _MENU_ resultados por página",
+        "searchBuilder": {
+            "add": "Adicionar Condição",
+            "button": {
+                "0": "Construtor de Pesquisa",
+                "_": "Construtor de Pesquisa (%d)"
+            },
+            "clearAll": "Limpar Tudo",
+            "condition": "Condição",
+            "conditions": {
+                "date": {
+                    "after": "Depois",
+                    "before": "Antes",
+                    "between": "Entre",
+                    "empty": "Vazio",
+                    "equals": "Igual",
+                    "not": "Não",
+                    "notBetween": "Não Entre",
+                    "notEmpty": "Não Vazio"
+                },
+                "number": {
+                    "between": "Entre",
+                    "empty": "Vazio",
+                    "equals": "Igual",
+                    "gt": "Maior Que",
+                    "gte": "Maior ou Igual a",
+                    "lt": "Menor Que",
+                    "lte": "Menor ou Igual a",
+                    "not": "Não",
+                    "notBetween": "Não Entre",
+                    "notEmpty": "Não Vazio"
+                },
+                "string": {
+                    "contains": "Contém",
+                    "empty": "Vazio",
+                    "endsWith": "Termina Com",
+                    "equals": "Igual",
+                    "not": "Não",
+                    "notEmpty": "Não Vazio",
+                    "startsWith": "Começa Com"
+                },
+                "array": {
+                    "contains": "Contém",
+                    "empty": "Vazio",
+                    "equals": "Igual à",
+                    "not": "Não",
+                    "notEmpty": "Não vazio",
+                    "without": "Não possui"
+                }
+            },
+            "data": "Data",
+            "deleteTitle": "Excluir regra de filtragem",
+            "logicAnd": "E",
+            "logicOr": "Ou",
+            "title": {
+                "0": "Construtor de Pesquisa",
+                "_": "Construtor de Pesquisa (%d)"
+            },
+            "value": "Valor"
+        },
+        "searchPanes": {
+            "clearMessage": "Limpar Tudo",
+            "collapse": {
+                "0": "Painéis de Pesquisa",
+                "_": "Painéis de Pesquisa (%d)"
+            },
+            "count": "{total}",
+            "countFiltered": "{shown} ({total})",
+            "emptyPanes": "Nenhum Painel de Pesquisa",
+            "loadMessage": "Carregando Painéis de Pesquisa...",
+            "title": "Filtros Ativos"
+        },
+        "searchPlaceholder": "Digite um termo para pesquisar",
+        "thousands": ".",
+        "datetime": {
+            "previous": "Anterior",
+            "next": "Próximo",
+            "hours": "Hora",
+            "minutes": "Minuto",
+            "seconds": "Segundo",
+            "amPm": [
+                "am",
+                "pm"
+            ],
+            "unknown": "-"
+        },
+        "editor": {
+            "close": "Fechar",
+            "create": {
+                "button": "Novo",
+                "submit": "Criar",
+                "title": "Criar novo registro"
+            },
+            "edit": {
+                "button": "Editar",
+                "submit": "Atualizar",
+                "title": "Editar registro"
+            },
+            "error": {
+                "system": "Ocorreu um erro no sistema (<a target=\"\\\" rel=\"nofollow\" href=\"\\\">Mais informações<\/a>)."
+            },
+            "multi": {
+                "noMulti": "Essa entrada pode ser editada individualmente, mas não como parte do grupo",
+                "restore": "Desfazer alterações",
+                "title": "Multiplos valores",
+                "info": "Os itens selecionados contêm valores diferentes para esta entrada. Para editar e definir todos os itens para esta entrada com o mesmo valor, clique ou toque aqui, caso contrário, eles manterão seus valores individuais."
+            },
+            "remove": {
+                "button": "Remover",
+                "confirm": {
+                    "_": "Tem certeza que quer deletar %d linhas?",
+                    "1": "Tem certeza que quer deletar 1 linha?"
+                },
+                "submit": "Remover",
+                "title": "Remover registro"
+            }
+        },
+        "decimal": ","
+    } 
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+</script>
+</body>
+</html>
