@@ -1,0 +1,11 @@
+.conteudo {
+    position: absolute;
+    top: 51px;
+    width: 100%;
+    height: 92%;
+    z-index: 0;
+}
+  
+#iframePrincipal {
+    overflow-y: hidden;
+}
